@@ -1,0 +1,24 @@
+1.PROMPT for WeightOne, PriceOne and WeightTwo, PriceTwo
+2. GET WeightOne, PriceOne, WeightTwo, PriceTwo
+3. IF  PriceOne < PriceTwo AND WeightOne >= WeightTwo THEN
+
+            
+              RESULT =  Package 1 is at better price 
+
+            ELSE 
+IF PriceOne > PriceTwo AND WeightOne <= WeightTwo THEN
+
+            
+               RESULT =  Package 2 is at better price 
+            
+          		  ELSE
+
+                          		 RESULT = Both packets are the same price 
+            
+END IF
+     END IF
+
+           
+
+
+DISPLAY RESULT
