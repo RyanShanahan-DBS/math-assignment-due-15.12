@@ -1,1 +1,153 @@
+CHECK FILE UNTIL THE END TO SEE PSEUDOCODE WRITTEN WITHOUT THE C# CODE IN BETWEEN.
+
+****************************************************************PSEUDOCODE MERGED WITH C# CODE BLOCKS:
+
+//VARIABLES
+            double max = 0, min = 0, followingIntegers, sum = 0, average = 0;
+            int j = 1, i = 2;
+            
+            //ESPECIAL INTEGER
+            Console.WriteLine("Enter first digit between 3 and 10: ");
+            int specialInteger = int.Parse(Console.ReadLine());
+
+1.PROMPT FOR AN INTEGER BETWEEN 3 AND 10
+2.GET specialInteger;
+
+
+            //INPUTS --ISOLATING FIRST INTEGER, GETTING THE SUM, AVERAGE, MAX AND MIN.
+            if (specialInteger >= 3 && specialInteger <= 10)
+            {
+3. IF specialInteger > 3 AND specialInteger < 10
+      
+                //ISOLATING THE FIRST INPUT INTEGER
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("\n Enter  1 digit: ");
+                followingIntegers = double.Parse(Console.ReadLine());
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("\n****\n");
+                j++;
+4. GET followingIntegers;
+
+                for (j = 2; j <= specialInteger; j++, i++)
+
+5. FOR j SET TO 2; j <= specialInteger; j++, i++)
+
+                {
+
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("\n Enter  {0} digit : ", i);
+                    followingIntegers = double.Parse(Console.ReadLine());
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("\n****\n");
+
+                    //GETTING THE MAX
+                    if (j == 2)
+
+                    {
+                        max = followingIntegers;
+                    }
+6. GET followingIntegers;
+7. IF j == 2
+		max = followingIntegers;
+	
+END IF
+
+
+                    if (followingIntegers > max)
+                    {
+                        max = followingIntegers;
+                    }
+
+8. IF followingIntegers > max
+	max = followingIntegers;
+END IF
+                    //GETTING THE MIN
+                    if (followingIntegers < 10000000000000000000 && j == 2)
+                    {
+
+                        min = followingIntegers;
+                    }
+
+                    
+9. IF followingIntegers < 10000000000000000000 AND j == 2
+	min = followingIntegers
+END IF
+                    if (min > followingIntegers)
+                    {
+
+                        min = followingIntegers;
+                    }
+
+10. IF min > followingIntegers
+	min = followingIntegers;
+END IF
+                    //GETTING THE SUM
+                    sum = sum + followingIntegers;
+
+11. sum = sum + followingIntegers
+
+                    //GETTING THE AVERAGE
+                    average = sum / (specialInteger - 1);
+
+12. average = sum / (specialInteger – 1)
+
+                                  
+                }
+            }
+
+                //DISPLAY SUM, AVERAGE, MAX AND MIN
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("SUM is {0} ", sum);
+                Console.Write("\n****\n");
+                Console.WriteLine("AVERAGE is {0} ", average);
+                Console.Write("\n****\n");
+                Console.WriteLine($"the max is: {max}");
+                Console.Write("\n****\n");
+                Console.WriteLine($"The min is: {min}");
+                
+                Console.ReadLine();
+             
+13. DISPLAY sum, average, max, min
+
+
+
+
+
+****************************************************************************************PSEUDOCODE ON ITS OWN:
+
+
+1.PROMPT FOR AN INTEGER BETWEEN 3 AND 10
+
+2.GET specialInteger;
+
+3. IF specialInteger > 3 AND specialInteger < 10
+
+4. GET followingIntegers;
+
+5. FOR j SET TO 2; j <= specialInteger; j++)
+
+6. GET followingIntegers;
+
+7. IF j == 2
+		max = followingIntegers;
+	
+END IF
+
+8. IF followingIntegers > max
+	max = followingIntegers;
+END IF
+
+9. IF followingIntegers < 10000000000000000000 AND j == 2
+	min = followingIntegers
+END IF
+
+10. IF min > followingIntegers
+	min = followingIntegers;
+END IF
+
+11. sum = sum + followingIntegers
+
+12. average = sum / (specialInteger – 1)
+
+13. DISPLAY sum, average, max, min
 
