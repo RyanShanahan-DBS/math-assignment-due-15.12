@@ -1,4 +1,4 @@
-Console.ForegroundColor = ConsoleColor.White;
+  Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("* What's the best rice for you? *\n\n");
 
             double w1, w2, p1, p2;
@@ -96,3 +96,5 @@ Console.ForegroundColor = ConsoleColor.White;
             {
                 Console.Write("\n\n Both packets are the same price and weight");
             }
+
+            Console.ReadLine();
