@@ -1,8 +1,9 @@
-  Console.ForegroundColor = ConsoleColor.White;
+Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("* What's the best rice for you? *\n\n");
 
-            double w1, w2, p1, p2;
-
+            double w1, w2, p1, p2, ppk1, ppk2;
+            
+        //Weight One
         w1again:
 
             try
@@ -21,7 +22,7 @@
                 goto w1again;
 
             }
-
+            //Price One
         p1again:
             try
             {
@@ -38,8 +39,8 @@
                 Console.WriteLine(ex.Message + "\n\nPlease enter a valid price.");
                 goto p1again;
 
-            }
-
+            }         
+            //Weight 2
         w2again:
             try
             {
@@ -58,6 +59,7 @@
 
             }
 
+            //Weight 2
         p2again:
             try
             {
@@ -75,26 +77,35 @@
                 goto p2again;
 
             }
+            //Price per kilo 1
+           
+            ppk1 = p1 / w1;
+
+            //Price per kilo 2
+            ppk2 = p2 / w2;
 
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             //if package 1 is better value
-            if (p1 < p2 && w1 >= w2)
+            if (ppk1 < ppk2)
 
             {
-                Console.Write("\n\nPackage 1 is better value ");
+                Console.Write("\n\nPackage 1 is better value.Package 1 is {0} euro per kilo and package 2 is {1} euro per kilo. ", ppk1, ppk2);
             }
 
             //if package 2 is better value
-            else if ((p1 > p2 && w1 <= w2))
+            else if (ppk1 >ppk2)
 
             {
-                Console.Write("\n\nPackage 2 is better value ");
+                Console.Write("\n\nPackage 2 is better value.Package 2 is {0} euro per kilo and package 1 is {1} euro per kilo. ", ppk2, ppk1);
+            
+           
             }
             //if both packets are the same price and weight
-            else if (p1 == p2 && w1 == w2)
+            else if (ppk1 == ppk2)
 
             {
-                Console.Write("\n\n Both packets are the same price and weight");
+                Console.Write("\n\n Both packets worth the same per kilo.");
             }
 
             Console.ReadLine();
+          
