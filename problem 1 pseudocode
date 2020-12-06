@@ -1,24 +1,21 @@
-1.PROMPT for WeightOne, PriceOne and WeightTwo, PriceTwo
-2. GET WeightOne, PriceOne, WeightTwo, PriceTwo
-3. IF  PriceOne < PriceTwo AND WeightOne >= WeightTwo THEN
-
-            
-              RESULT =  Package 1 is at better price 
-
-            ELSE 
-IF PriceOne > PriceTwo AND WeightOne <= WeightTwo THEN
-
-            
-               RESULT =  Package 2 is at better price 
-            
-          		  ELSE
-
-                          		 RESULT = Both packets are the same price 
-            
-END IF
-     END IF
-
-           
+QUESTION 1
 
 
-DISPLAY RESULT
+1.PROMPT for package 1 weight(W1) and price(P1). Package 2 weight(W2) and price(P2).
+2.Get W1, P1, W2, P2
+3.Price Per kilo for package 1 (PPK1) = P1/W1. Price Per Kilo for package 2 (PPK2) = P2/W2. 
+4.IF (PPK1 < PPK2) THEN
+RESULT = Package 1 is better value
+
+		ELSE IF (PPK1 > PPK2) THEN
+	
+		RESULT = Package 2 is better value
+		
+				ELSE IF (PPK1 == PPK2)
+	
+			            RESULT = Both packages are worth the same per kilo
+5.END IF
+	
+6.DISPLAY RESULT
+		
+
