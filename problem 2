@@ -1,4 +1,4 @@
-Console.ForegroundColor = ConsoleColor.Red;
+ Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\nDesign an algorithm that will read a series of integers at the terminal. The first integer is special, as it indicates how many more integers will follow. The first integer must be between 3 and 10. Your algorithm is to calculate the sum and average of the integers, excluding the first integer, and display these values to the screen. The program must also display the minimum and the maximum number entered excluding the first integer.\n\n");
 
             Console.ResetColor();
@@ -6,15 +6,16 @@ Console.ForegroundColor = ConsoleColor.Red;
             //VARIABLES
             double max = 0, min = 0, followingIntegers, sum = 0, average = 0;
             int j = 1, i = 2;
-            
+
+            beginning:
             //ESPECIAL INTEGER
             Console.WriteLine("Enter first digit between 3 and 10: ");
             int specialInteger = int.Parse(Console.ReadLine());
 
             //INPUTS --ISOLATING FIRST INTEGER, GETTING THE SUM, AVERAGE, MAX AND MIN.
-            if (specialInteger >= 3 && specialInteger <= 10)
+            if (specialInteger > 3 && specialInteger < 10)
             {
-                
+
                 //ISOLATING THE FIRST INPUT INTEGER
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("\n Enter  1 digit: ");
@@ -53,7 +54,7 @@ Console.ForegroundColor = ConsoleColor.Red;
                         min = followingIntegers;
                     }
 
-                    
+
                     if (min > followingIntegers)
                     {
 
@@ -66,9 +67,8 @@ Console.ForegroundColor = ConsoleColor.Red;
                     //GETTING THE AVERAGE
                     average = sum / (specialInteger - 1);
 
-                                  
+
                 }
-            }
 
                 //DISPLAY SUM, AVERAGE, MAX AND MIN
                 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -79,5 +79,13 @@ Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"the max is: {max}");
                 Console.Write("\n****\n");
                 Console.WriteLine($"The min is: {min}");
-                
+
                 Console.ReadLine();
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid Number");
+                goto beginning;
+            }
+
