@@ -7,7 +7,7 @@
             double max = 0, min = 0, followingIntegers, sum = 0, average = 0;
             int j = 1, i = 2;
 
-            beginning:
+        beginning:
             //ESPECIAL INTEGER
             Console.WriteLine("Enter first digit between 3 and 10: ");
             int specialInteger = int.Parse(Console.ReadLine());
@@ -34,11 +34,12 @@
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write("\n****\n");
 
-                    //GETTING THE MAX
+                    //GETTING THE MAX AND MIN
                     if (j == 2)
 
                     {
                         max = followingIntegers;
+                        min = followingIntegers;
                     }
 
 
@@ -47,14 +48,7 @@
                         max = followingIntegers;
                     }
 
-                    //GETTING THE MIN
-                    if (followingIntegers < 10000000000000000000 && j == 2)
-                    {
-
-                        min = followingIntegers;
-                    }
-
-
+                   
                     if (min > followingIntegers)
                     {
 
@@ -62,7 +56,7 @@
                     }
 
                     //GETTING THE SUM
-                    sum = sum + followingIntegers;
+                    sum += followingIntegers;
 
                     //GETTING THE AVERAGE
                     average = sum / (specialInteger - 1);
@@ -72,14 +66,7 @@
 
                 //DISPLAY SUM, AVERAGE, MAX AND MIN
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("SUM is {0} ", sum);
-                Console.Write("\n****\n");
-                Console.WriteLine("AVERAGE is {0} ", average);
-                Console.Write("\n****\n");
-                Console.WriteLine($"the max is: {max}");
-                Console.Write("\n****\n");
-                Console.WriteLine($"The min is: {min}");
-
+                Console.WriteLine($"SUM is {sum}, the average is {average}, the max is {max} and min the is {min}");
                 Console.ReadLine();
             }
 
